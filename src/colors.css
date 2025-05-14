@@ -1,0 +1,47 @@
+:root {
+  --marrom: #3a281a;
+  
+  --vermelho: #d62f38;
+  --amarelo: #f9c936;
+  --azul: #1d71b8;
+  --verde: #5db96e;
+  --rosa: #e8499d;
+  --laranja: #ff8243;
+  --preto: #111;
+  --bege-fundo: #f9f6f0;
+}
+
+/* aplicação base */
+body {
+  background-color: var(--bege-fundo);
+  color: var(--marrom);
+}
+
+.sidebar {
+  background-color: var(--amarelo);
+  color: var(--preto);
+}
+
+.nav a {
+  color: var(--marrom);
+}
+
+.nav a:hover {
+  color: var(--vermelho);
+}
+
+.title {
+  color: var(--rosa);
+}
+
+h1, h2, h3 {
+  color: var(--marrom);
+}
+
+a {
+  color: var(--vermelho);
+}
+
+a:hover {
+  color: var(--laranja);
+}
