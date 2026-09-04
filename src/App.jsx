@@ -1,50 +1,71 @@
-// App.jsx
-import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+// Reconstruido a partir do build publicado em gh-pages (assets/index-DMvVWWW3.js).
+import { useState, useMemo } from 'react';
+import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import Masonry from 'react-masonry-css';
+import projetos from './data/projetos.jsx';
+import ProjetoDetalhe from './pages/ProjetoDetalhe.jsx';
 import './App.css';
 import './colors.css';
-import { useMemo } from 'react';
-import projetos from './data/projetos';
-import ProjetoDetalhe from './pages/ProjetoDetalhe';
+
+const INSTAGRAM = 'jtragtenberg';
+const LINKEDIN = 'joaotragtenberg';
+const GITHUB = 'jtragtenberg';
 
 const Sobre = () => (
   <section className="block">
-    <h2>SOBRE</h2>
-    <p>João Tragtenberg é designer de instrumentos digitais de música e dança, artista e pesquisador em interação humano-computador.</p>
-    <p>Atualmente sou doutorando em Design pela UFPE, onde pesquiso junto à comunidade da Xambá (Olinda/PE) o design participativo de instrumentos musicais digitais enraizados na cultura local, com quem fundei o Bongarbit — Laboratório de Tecnologias Orgânicas e Digitais da Xambá. Também sou mestre em Ciência da Computação com foco em mídia e interação e minha graduação foi em Física (UFSC).</p>
+    <h2>JOÃO TRAGTENBERG</h2>
+    <img src="/images/retrato.jpg" alt="Retrato de João Tragtenberg" className="sobre-img" />
+    <p>Sou desenvolvedor, artista, designer, educador e pesquisador baseado em Recife/PE. Trabalho na interseção entre design, música, tecnologias digitais e cultura popular brasileira. Desenvolvo instrumentos musicais digitais para música e para a dança. Acredito na potência da coletividade e da cultura popular como forças para a criação de outros designs e outras tecnologias digitais.</p>
+    <p>Atualmente sou doutorando em Design pela UFPE, onde pesquiso junto à comunidade da Xambá (Olinda/PE) o design participativo de instrumentos musicais digitais enraizados na cultura local, com quem fundei o Bongarbit — Laboratório de Tecnologias Orgânicas e Digitais da Xambá. Também sou mestre em Ciência da Computação com foco em mídia e interação e minha graduação foi em Física (UFSC). </p>
+    <p>Já atuei como pesquisador industrial no Instituto SENAI de Inovação em TICs, onde iniciei o CIIMUS — núcleo de Criatividade e Inovação para a Indústria da Música. Também sou fundador do Batebit Artesania Digital, espaço de criação de tecnologias digitais para arte com um foco em contribuir para a cena musical de Recife. </p>
     <p>Tenho apresentado meus trabalhos artísticos em festivais como o Ars Electronica (Áustria/Romênia), no Carnaval do Recife (junto ao Quinteto Violado), e trabalhos de pesquisa na conferência internacional NIME — New Interfaces for Musical Expression, onde fui premiado com o Pamela Z Award for Innovation em 2021, 2022 e 2026, e no SBCM, onde recebi o prêmio de “Best Paper” na edição de 2019.</p>
+    <p>Sigo um caminho que transita entre o desenvolvimento de software, de hardware, design participativo, fabricação digital, pesquisa, educação, performance e experimentação para expandir nossos corpos e nossos sons, em busca de tecnologias digitais enraizadas nas nossas identidades culturais.</p>
+    <p>Tu também pode ficar sabendo no que e onde estou trabalhando nessas plataformas:</p>
+    <div className="contato-redes">
+      <a href={`https://www.instagram.com/${INSTAGRAM}`} target="_blank" rel="noopener noreferrer" className="social-button">
+        <img src="/images/icons/instagram.png" alt="Instagram" className="social-icon" loading="lazy" />
+        @{INSTAGRAM}
+      </a>
+      <a href={`https://www.linkedin.com/in/${LINKEDIN}`} target="_blank" rel="noopener noreferrer" className="social-button">
+        <img src="/images/icons/linkedin.png" alt="LinkedIn" className="social-icon" loading="lazy" />
+        @{LINKEDIN}
+      </a>
+      <a href={`https://github.com/${GITHUB}`} target="_blank" rel="noopener noreferrer" className="social-button">
+        <img src="/images/icons/github.png" alt="GitHub" className="social-icon" loading="lazy" />
+        @{GITHUB}
+      </a>
+    </div>
   </section>
 );
 
 const Projetos = () => (
   <section className="block">
     <h2>PROJETOS</h2>
-    <Masonry 
-    breakpointCols={{ default: 3, 1100: 2, 700: 1 }}
-    className="grid-masonry"
-    columnClassName="grid-column"
+    <Masonry
+      breakpointCols={{ default: 3, 1100: 2, 700: 1 }}
+      className="grid-masonry"
+      columnClassName="grid-column"
     >
-{projetos.map((p) => {
-  const randomAngle = `${(Math.random() * 2 - 1).toFixed(2)}deg`;
+      {projetos.map((p) => {
+        const randomAngle = `${(Math.random() * 2 - 1).toFixed(2)}deg`;
 
-  return (
-    <div
-      key={p.id}
-      className="grid-item"
-      style={{ transform: `rotate(${randomAngle})` }}
-    >
-      <Link to={`/projeto/${p.id}`}>
-        <div className="image-wrapper">
-          <img src={p.imagem} alt={p.titulo} />
-          {/*{p.ano && <span className="watermark">{p.ano}</span>}*/}
-        </div>
-        <h3>{p.titulo}</h3>
-      </Link>
-      <p>{p.resumo}</p>
-    </div>
-  );
-})}
+        return (
+          <div
+            key={p.id}
+            className="grid-item"
+            style={{ transform: `rotate(${randomAngle})` }}
+          >
+            <Link to={`/projeto/${p.id}`}>
+              <div className="image-wrapper">
+                <img src={p.imagemCard} alt={p.titulo} loading="lazy" />
+              </div>
+              <h3>{p.titulo}</h3>
+              <h4>{p.ano ? `${p.ano}` : ''}</h4>
+            </Link>
+            <p>{p.resumo}</p>
+          </div>
+        );
+      })}
     </Masonry>
   </section>
 );
@@ -99,74 +120,106 @@ const Publicacoes = () => (
   </section>
 );
 
+// Email guardado em base64 para dificultar coleta automatica.
+const EMAIL_B64 = 'dHJhZ3RlbmJlcmdAZ21haWwuY29t';
+const email = atob(EMAIL_B64);
+
 const Contato = () => (
-  <section className="block">
-    <h2>CONTATO</h2>
-    <p>contato: tragtenberg@gmail.com</p>
-    <p>instagram: https://www.instagram.com/jtragtenberg</p>
+  <section className="block contato">
+    <h2>Contato </h2>
+    <p>Se tu gostou do meu trabalho, quer conhecer meus instrumentos, me contratar para algum projeto, ou apenas conversar sobre algum interesse em comum, entra em contato comigo por email:</p>
+    <div className="contato-redes">
+      <a href={`mailto:${email}`} className="social-button">
+        <img src="/images/icons/email.png" alt="Email" className="social-icon" loading="lazy" />
+        {email}
+      </a>
+    </div>
+    <p></p>
+    <p></p>
   </section>
 );
 
-const getRandomRotation = () => {
-  return `${(Math.random() * 10 - 5).toFixed(2)}deg`;
+const Layout = ({ navLinks, navAngles, menuOpen, toggleMenu }) => {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+
+  return (
+    <div className="app poster-style">
+      <aside className={`sidebar fixed-sidebar ${menuOpen ? 'open' : ''}`}>
+        <div className="title-bar">
+          <div className="title-text">
+            <Link to="/" className={`title-link ${isHome ? 'rosa' : 'preto'}`}>
+              <div>JOÃO</div>
+              <div>TRAGTENBERG</div>
+            </Link>
+          </div>
+          {isHome && (
+            <Link to="/contato" className="contato-link">
+              <img src="/images/beija-fulo.png" alt="Beija-flor" className="beija-icon" loading="lazy" />
+            </Link>
+          )}
+        </div>
+        <nav className="nav">
+          {navLinks.map((link) => (
+            <Link
+              key={link.to}
+              to={link.to}
+              style={{ display: 'flex', alignItems: 'center', transform: `rotate(${navAngles[link.to]})` }}
+              className={`nav-link ${location.pathname === link.to ? 'ativo' : ''}`}
+            >
+              {location.pathname === link.to && (
+                <img src="/images/beija-fulo.png" alt="Beija-flor" className="beija-flor-menu" loading="lazy" />
+              )}
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+        <button className="menu-toggle" onClick={toggleMenu}>☰</button>
+      </aside>
+      <main className="container">
+        <Routes>
+          <Route path="/" element={<Sobre />} />
+          <Route path="/projetos" element={<Projetos />} />
+          <Route path="/publicacoes" element={<Publicacoes />} />
+          <Route path="/contato" element={<Contato />} />
+          <Route path="/projeto/:id" element={<ProjetoDetalhe />} />
+        </Routes>
+      </main>
+    </div>
+  );
 };
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
   const navLinks = [
-  { to: '/', label: 'SOBRE' },
-  { to: '/projetos', label: 'PROJETOS' },
-  { to: '/publicacoes', label: 'PUBLICAÇÕES' },
-  { to: '/contato', label: 'CONTATO' }
-];
+    { to: '/', label: 'SOBRE' },
+    { to: '/projetos', label: 'PROJETOS' },
+    { to: '/publicacoes', label: 'PUBLICAÇÕES' },
+    { to: '/contato', label: 'CONTATO' },
+  ];
 
-// gera rotação fixa por link
-const navAngles = useMemo(() => {
-  return navLinks.reduce((acc, link) => {
-    acc[link.to] = `${(Math.random() * 5 - 2.5).toFixed(2)}deg`;
-    return acc;
-  }, {});
-}, []);
+  // Angulos sorteados uma vez por sessao, para o menu ficar levemente torto.
+  const navAngles = useMemo(
+    () =>
+      navLinks.reduce((acc, link) => {
+        acc[link.to] = `${(Math.random() * 5 - 2.5).toFixed(2)}deg`;
+        return acc;
+      }, {}),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  );
 
   return (
-    <Router>
-      <div className="app poster-style">
-        <aside className={`sidebar fixed-sidebar ${menuOpen ? 'open' : ''}`}>
-          <div className="title">JOÃO TRAGTENBERG</div>
-          <nav className="nav">
-  {navLinks.map((link) => (
-    <Link
-      key={link.to}
-      to={link.to}
-      style={{ display: 'block', transform: `rotate(${navAngles[link.to]})` }}
-      className="nav-link"
-    >
-      {link.label}
-    </Link>
-  ))}
-</nav>
-          <button className="menu-toggle" onClick={toggleMenu}>
-            ☰
-          </button>
-        </aside>
-
-        <main className="container">
-          <Routes>
-            <Route path="/" element={<Sobre />} />
-            <Route path="/projetos" element={<Projetos />} />
-            <Route path="/publicacoes" element={<Publicacoes />} />
-            <Route path="/contato" element={<Contato />} />
-            <Route path="/projeto/:id" element={<ProjetoDetalhe />} />
-          </Routes>
-        </main>
-      </div>
-    </Router>
+    <BrowserRouter basename="/">
+      <Layout
+        navLinks={navLinks}
+        navAngles={navAngles}
+        menuOpen={menuOpen}
+        toggleMenu={toggleMenu}
+      />
+    </BrowserRouter>
   );
 };
 

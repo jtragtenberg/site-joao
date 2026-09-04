@@ -1,6 +1,8 @@
+/* Paleta e cores base.
+   Reconstruido a partir do build publicado em gh-pages (assets/index-Bi4RPE3r.css). */
+
 :root {
   --marrom: #3a281a;
-  
   --vermelho: #d62f38;
   --amarelo: #f9c936;
   --azul: #1d71b8;
@@ -11,7 +13,6 @@
   --bege-fundo: #f9f6f0;
 }
 
-/* aplicação base */
 body {
   background-color: var(--bege-fundo);
   color: var(--marrom);
@@ -27,14 +28,10 @@ body {
 }
 
 .nav a:hover {
-  color: var(--vermelho);
-}
-
-.title {
   color: var(--rosa);
 }
 
-h1, h2, h3 {
+h1,h2,h3 {
   color: var(--marrom);
 }
 
@@ -44,4 +41,28 @@ a {
 
 a:hover {
   color: var(--laranja);
+}
+
+.title-text a:hover,.title-text a.rosa {
+  color: var(--rosa);
+}
+
+.title-text a.preto {
+  color: var(--preto);
+}
+
+.nav-link.ativo {
+  color: var(--rosa);
+}
+
+.title-link {
+  text-decoration: none;
+}
+
+.title-link.preto {
+  color: var(--preto);
+}
+
+.title-link.rosa,.title-link.preto:hover {
+  color: var(--rosa);
 }
