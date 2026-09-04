@@ -105,9 +105,7 @@ const projetos = [
     imagemCard: '/images/botoes-falantes_400px.jpg',
     imagemDetalhe: '/images/botoes-falantes_800px.jpg',
     videos: [
-      'https://www.youtube.com/embed/48ikO1KuL8A',
-      'https://www.youtube.com/embed/UNRNkNTN5Kc',
-      'https://www.youtube.com/embed/FP_brAhS1uU',
+      'https://www.youtube.com/embed/faSNcZN78WA',
       'https://www.youtube.com/embed/oIFhlwC83dc',
       'https://www.youtube.com/embed/cAj7CsV0HIs',
       'https://www.youtube.com/embed/iMd_PH0wYeo'
