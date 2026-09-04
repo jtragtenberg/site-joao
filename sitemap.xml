@@ -1,168 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset 
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://joaotragtenberg.com.br/</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/projetos</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/publicacoes</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/contato</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
-
-
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/engome-adubado</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/afro-pindoramica</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/alterite</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/agbau</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/botoes-falantes</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/bongarbit</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/o-agora</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/giromin</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/ciimus-isi</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/mulher-banda</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/foles-digitais</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/contact</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/gira</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/porcos</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/carnaval-opening</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/violed</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/probatio</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/caboclo-de-luz</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/batebit</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/piso-interativo</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://joaotragtenberg.com.br/projeto/motioner</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/pisada</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/tumta</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://joaotragtenberg.com.br/projeto/foco</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
 </urlset>
