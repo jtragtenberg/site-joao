@@ -139,6 +139,14 @@ const Contato = () => (
   </section>
 );
 
+const NaoEncontrada = () => (
+  <section className="block">
+    <h2>PÁGINA NÃO ENCONTRADA</h2>
+    <p>Esse endereço não existe por aqui. Talvez o link esteja quebrado ou a página tenha mudado de lugar.</p>
+    <p><Link to="/">Voltar para a página inicial</Link></p>
+  </section>
+);
+
 const Layout = ({ navLinks, navAngles, menuOpen, toggleMenu }) => {
   const location = useLocation();
   const isHome = location.pathname === '/';
@@ -183,13 +191,16 @@ const Layout = ({ navLinks, navAngles, menuOpen, toggleMenu }) => {
           <Route path="/publicacoes" element={<Publicacoes />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="/projeto/:id" element={<ProjetoDetalhe />} />
+          <Route path="*" element={<NaoEncontrada />} />
         </Routes>
       </main>
     </div>
   );
 };
 
-const App = () => {
+// Arvore de rotas sem roteador: o navegador a embrulha em BrowserRouter (abaixo)
+// e a pre-renderizacao do build em StaticRouter (src/entry-server.jsx).
+export const AppShell = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
@@ -212,15 +223,19 @@ const App = () => {
   );
 
   return (
-    <BrowserRouter basename="/">
-      <Layout
-        navLinks={navLinks}
-        navAngles={navAngles}
-        menuOpen={menuOpen}
-        toggleMenu={toggleMenu}
-      />
-    </BrowserRouter>
+    <Layout
+      navLinks={navLinks}
+      navAngles={navAngles}
+      menuOpen={menuOpen}
+      toggleMenu={toggleMenu}
+    />
   );
 };
+
+const App = () => (
+  <BrowserRouter basename="/">
+    <AppShell />
+  </BrowserRouter>
+);
 
 export default App;
