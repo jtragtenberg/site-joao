@@ -2,8 +2,8 @@ const projetos = [
   {
     id: 'bongarbit',
     titulo: 'BONGARBIT',
-    resumo: 'Laboratório de tecnologias digitais da Xambá com criação de instrumentos musicais digitais.',
-    descricao: 'O Bongarbit é um laboratório de tecnologias digitais fundado junto à comunidade Xambá em Olinda. A proposta é construir instrumentos musicais digitais em diálogo com tradições culturais e religiosas afro-brasileiras, a partir de processos participativos e de troca de saberes.',
+    resumo: 'Laboratório de tecnologias orgânicas e digitais da Xambá com criação de instrumentos musicais digitais.',
+    descricao: 'O Bongarbit é um laboratório de tecnologias orgânicas e digitais fundado junto à comunidade Xambá em Olinda. A proposta é construir instrumentos musicais digitais em diálogo com tradições culturais e religiosas afro-brasileiras, a partir de processos participativos e de troca de saberes.',
     imagem: '/images/bongarbit.jpg',
     link: 'https://www.instagram.com/bongarbit/',
     ano: '2022'

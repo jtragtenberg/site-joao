@@ -12,6 +12,8 @@ const Sobre = () => (
   <section className="block">
     <h2>SOBRE</h2>
     <p>João Tragtenberg é designer de instrumentos digitais de música e dança, artista e pesquisador em interação humano-computador.</p>
+    <p>Atualmente sou doutorando em Design pela UFPE, onde pesquiso junto à comunidade da Xambá (Olinda/PE) o design participativo de instrumentos musicais digitais enraizados na cultura local, com quem fundei o Bongarbit — Laboratório de Tecnologias Orgânicas e Digitais da Xambá. Também sou mestre em Ciência da Computação com foco em mídia e interação e minha graduação foi em Física (UFSC).</p>
+    <p>Tenho apresentado meus trabalhos artísticos em festivais como o Ars Electronica (Áustria/Romênia), no Carnaval do Recife (junto ao Quinteto Violado), e trabalhos de pesquisa na conferência internacional NIME — New Interfaces for Musical Expression, onde fui premiado com o Pamela Z Award for Innovation em 2021, 2022 e 2026, e no SBCM, onde recebi o prêmio de “Best Paper” na edição de 2019.</p>
   </section>
 );
 
@@ -51,6 +53,9 @@ const Publicacoes = () => (
   <section className="block">
     <h2>PUBLICAÇÕES</h2>
     <ul className="pub-list">
+      <li>
+        TRAGTENBERG, J.; CALEGARIO, F.; MIRANDA, E. R. Giromin Residency Report: Creative Exploration by Musicians and Dancers from Frevo and Afro-Brazilian traditions. In: NIME 2026 – International Conference on New Interfaces for Musical Expression. 2026. DOI: <a href="https://doi.org/10.5281/zenodo.20784182" target="_blank">10.5281/zenodo.20784182</a>
+      </li>
       <li>
         TRAGTENBERG, J.; CALEGARIO, F.; WANDERLEY, M.; CAVALCANTI, V. Designing DMIs with(in) a Music Culture: A Participatory Design Process with the Xambá Quilombola Community. In: NIME 2024 – International Conference on New Interfaces for Musical Expression, Utrecht, Holanda. 2024. DOI: <a href="https://doi.org/10.5281/zenodo.13904882" target="_blank">10.5281/zenodo.13904882</a>
       </li>
